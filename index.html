@@ -32,16 +32,16 @@
               <a class="nav-link active text-body-secondary" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active text-body-secondary" aria-current="page" href="#">Saldi</a>
+              <a class="nav-link active text-body-secondary" aria-current="page" href="#saldi">Saldi</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active text-body-secondary" aria-current="page" href="#">Welcome Summer</a>
+              <a class="nav-link active text-body-secondary" aria-current="page" href="#welcome-summer">Welcome Summer</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active text-body-secondary" aria-current="page" href="#">Last Minute</a>
+              <a class="nav-link active text-body-secondary" aria-current="page" href="#last-minute">Last Minute</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active text-body-secondary" aria-current="page" href="#">Recensioni</a>
+              <a class="nav-link active text-body-secondary" aria-current="page" href="#recensioni">Recensioni</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -68,10 +68,19 @@
       </div>
       <!-- inizio saldi -->
       <div class="d-flex align-items-center justify-content-between mb-3">
-        <h3>Saldi</h3>
-        <button>Nascondi sezione</button>
+        <h3 id="saldi">Saldi</h3>
+        <button
+          class="text-info bg-transparent border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#box-saldi"
+          aria-expanded="true"
+          aria-controls="box-saldi"
+        >
+          Nascondi sezione
+        </button>
       </div>
-      <div class="row gx-3 gy-2">
+      <div class="collapse show row gx-3 gy-2" id="box-saldi">
         <div class="col-6 col-sm-4 col-lg-3">
           <div class="card h-100 border border-3 border-info rounded-2">
             <img
@@ -132,10 +141,19 @@
       </div>
       <!-- inizio welcome summer  -->
       <div id="welcome-summer" class="d-flex align-items-center justify-content-between mt-5 mb-3">
-        <h3>Welcome Summer</h3>
-        <button>Nascondi sezione</button>
+        <h3 id="welcome-summer">Welcome Summer</h3>
+        <button
+          class="text-info bg-transparent border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#box-welcome-summer"
+          aria-expanded="true"
+          aria-controls="box-welcome-summer"
+        >
+          Nascondi sezione
+        </button>
       </div>
-      <div class="row gx-3 gy-2">
+      <div class="collapse show row gx-3 gy-2" id="box-welcome-summer">
         <div class="col-6 col-lg-4 col-xl-2">
           <div class="card shadow rounded-1">
             <img
@@ -223,22 +241,24 @@
         <!-- fine welcome -->
       </div>
       <!-- inizio offerta del giono -->
-      <h3 class="mt-5">Offerta del giorno</h3>
-      <div class="row mt-3">
-        <div class="col-8">
-          <img
-            src="https://i0.wp.com/www.portkey.it/sito/wp-content/uploads/2021/03/wb_studios_tour.png?resize=768%2C545&ssl=1"
-            class="card-img-top rounded-2 shadow"
-            alt="wb studios"
-          />
+      <div class="d-none d-md-block">
+        <h3 class="mt-5">Offerta del giorno</h3>
+        <div class="row mt-3">
+          <div class="col-8">
+            <img
+              src="https://i0.wp.com/www.portkey.it/sito/wp-content/uploads/2021/03/wb_studios_tour.png?resize=768%2C545&ssl=1"
+              class="card-img-top rounded-2 shadow"
+              alt="wb studios"
+            />
+          </div>
+          <div class="col-4">
+            <h2 class="display-3">Warner Bros Studios</h2>
+            <p class="font-monospace mb-2 fs-6">10.01.2021-31.01.2021</p>
+            <p class="fs-4">Tour a partire da 20£, non farteli sfuggire!</p>
+            <button class="text-white bg-black border-0 rounded-pill">Best offer</button>
+          </div>
+          <!-- fine offerta del giorno -->
         </div>
-        <div class="col-4">
-          <h2 class="display-3">Warner Bros Studios</h2>
-          <p class="font-monospace mb-2 fs-6">10.01.2021-31.01.2021</p>
-          <p class="fs-4">Tour a partire da 20£, non farteli sfuggire!</p>
-          <button class="text-white bg-black border-0 rounded-pill">Best offer</button>
-        </div>
-        <!-- fine offerta del giorno -->
       </div>
       <!-- inizio last minute -->
       <h3 class="mt-5" id="last-minute">Last Minute</h3>
@@ -300,7 +320,7 @@
         <!-- fine last minute -->
       </div>
       <!-- inizio cosa dicono di noi -->
-      <h3 class="mt-5 text-center">Dicono di noi</h3>
+      <h3 class="mt-5 text-center" id="recensioni">Dicono di noi</h3>
       <div class="row">
         <div class="col-2 col-md-1 text-center">
           <div class="border border-2 border-info rounded-circle w-100">
